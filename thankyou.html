@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thankyou
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    
+</head>
+<body>
+    <section class="container">
+        <div class="thankyou__container">
+            <div class="thankyou__img">
+                <img src="./images/thank you illustration.svg" alt="">
+            </div>
+            <div class="thankyou__submit-result">
+                <p id="result">Please select some rate</p>
+            </div>
+            <div class="thankyou__contents">
+                <h1>Thank you!</h1>
+                <p>
+                    We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!
+                </p>
+            </div>
+        </div>
+    </section>
+    <script>
+        const rated = localStorage.getItem('rating');
+        const p = document.getElementById('result')
+        rated ? 
+        p.innerHTML = `You selected ${rated} out of 5`:
+        p.classList.add("error-text");
+    </script>
+</body>
+</html>
